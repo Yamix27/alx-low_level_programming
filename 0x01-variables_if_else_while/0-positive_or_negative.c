@@ -6,9 +6,7 @@
  * main - Entry point of the program
  *
  * Description: This program generates a random number and determines
- *              whether it is positive, negative, or zero. It uses the rand()
- *              function from the C standard library to generate a random
- *              number, and then evaluates and displays the result.
+ *		whether it is positive, negative, or zero.
  *
  * Return: 0 on successful execution
  */
