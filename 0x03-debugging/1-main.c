@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
-* THE main -  This causes an infinited loop
-* Return: should be 0
+* main - causes an infinite loop
+* Return: 0
 */
 int main(void)
 {
@@ -14,4 +14,4 @@ i = 0;
 /*}*/
 printf("Infinite loop avoided! \\o/\n");
 return (0);
-}
+}}
