@@ -1,19 +1,27 @@
 #include "main.h"
 
 /**
- * print_most_numbers - check the code
+ * more_numbers - check the code
  *
  * Return: nothing
  */
 
-void print_most_numbers(void)
+void more_numbers(void)
 {
-	int n;
+int the_line;
 
-	for (n = '0'; n <= '9'; n++)
+	for (the_line = 0; the_line <= 9; the_line++)
 	{
-		if (n != '2' && n != '4')
-		_putchar (n);
+		int number;
+
+		for (number = 0; number <= 14; number++)
+		{
+			if (number > 9)
+			{
+				_putchar (number / 10 + 48);
+			}
+			_putchar (num % 10 + 48);
+		}
+		_putchar('\n');
 	}
-	_putchar ('\n');
 }
