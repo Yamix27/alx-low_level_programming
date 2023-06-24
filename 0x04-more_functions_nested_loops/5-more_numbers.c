@@ -1,26 +1,24 @@
 #include "main.h"
 
 /**
- * more_numbers - check the code
+ * more_numbers - check the code.
  *
- * Return: nothing
+ * Return: Nothing.
  */
 
 void more_numbers(void)
 {
-int the_line;
+	int a, num;
 
-	for (the_line = 0; the_line <= 9; the_line++)
+	for (a = 0; a < 10; a++)
 	{
-		int number;
-
-		for (number = 0; number <= 14; number++)
+		for (num = 0; num <= 14; num++)
 		{
-			if (number > 9)
+			if (num > 9)
 			{
-				_putchar (number / 10 + 48);
+				_putchar ('0' + num / 10);
 			}
-			_putchar (num % 10 + 48);
+			_putchar ('0' + num % 10);
 		}
 		_putchar('\n');
 	}
