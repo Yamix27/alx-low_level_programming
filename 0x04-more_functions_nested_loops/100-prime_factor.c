@@ -1,46 +1,37 @@
-#include <stdio.h>
-#include <math.h>
+/*
+ * File: 10-print_triangle.c
+ * Auth: AMYNE_BOUTALLAGHT
+ */
+
+#include "main.h"
 
 /**
- * largest_prime_factor - Finds the largest prime factor of a number.
+ * print_triangle - Print a triangle.
  *
- * @num: The number to find the largest prime factor of.
+ * @size: The size of the triangle.
  *
- * Return: The largest prime factor of the number.
+ * return: Nothing.
  */
-long largest_prime_factor(long num)
+void print_triangle(int size)
 {
-    long largest_prime = -1;
-    int i;
+	int head, index;
 
-    while (num % 2 == 0)
-    {
-        largest_prime = 2;
-        num /= 2;
-    }
+	if (size > 0)
+	{
+		for (head = 1; head <= size; head++)
+		{
+			for (index = size - head; index > 0; index--)
+				putchar(' ');
 
-    for (i = 3; i <= sqrt(num); i += 2)
-    {
-        while (num % i == 0)
-        {
-            largest_prime = i;
-            num /= i;
-        }
-    }
+			for (index = 0; index < head; index++)
+				putchar('#');
 
-    if (num > 2)
-        largest_prime = num;
+			if (head == size)
+				continue;
 
-    return largest_prime;
+			putchar('\n');
+		}
+	}
+
+	putchar('\n');
 }
-
-int main(void)
-{
-    long number = 612852475143;
-    long largest_prime = largest_prime_factor(number);
-
-    printf("The largest prime factor of %ld is %ld\n", number, largest_prime);
-
-    return 0;
-}
-
