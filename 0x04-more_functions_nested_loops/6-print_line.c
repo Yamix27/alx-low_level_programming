@@ -6,17 +6,17 @@
   * Return: Nothing.
   */
 
-void print_line(int m)
+void print_line(int n)
 {
-	if (m <= 0)
+	if (n <= 0)
 	{
 		_putchar('\n');
 	}
 	else
 	{
-		int a;
+		int i;
 
-		for (a = 1; a <= m; a++)
+		for (i = 1; i <= n; i++)
 		{
 			_putchar('_');
 		}

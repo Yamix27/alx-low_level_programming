@@ -2,27 +2,22 @@
 
 /**
  * print_square - function
- * @sideLength: parameter
+ *@size :parameter
  * Return: nothing
  */
 
-void print_square(int sideLength)
+void print_square(int size)
 {
-    int row, col;
+int i, j;
 
-    if (sideLength <= 0)
-    {
-        _putchar('\n');
-    }
-    else
-    {
-        for (row = 0; row < sideLength; row++)
-        {
-            for (col = 0; col < sideLength; col++)
-            {
-                _putchar('#');
-            }
-            _putchar('\n');
-        }
-    }
+if (size <= 0)
+	_putchar('\n');
+for (i = 0; i < size; i++)
+{
+	for (j = 0; j < size; j++)
+	{
+		_putchar('#');
+	}
+	_putchar('\n');
+}
 }

@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_diagonal - function
- *@n :parameter
- * Return: nothing
- */
+  * print_diagonal - draw a diagonal line on the terminal.
+  * @n :parameter
+  * Return: Nothing.
+  */
 
 void print_diagonal(int n)
 {
@@ -16,10 +16,12 @@ void print_diagonal(int n)
 		a = i;
 		while (a--)
 			_putchar(' ');
+
 		_putchar('\\');
 		_putchar('\n');
 		i++;
 	}
+
 	if (n <= 0)
 		_putchar('\n');
 }
