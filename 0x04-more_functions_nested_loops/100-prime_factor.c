@@ -1,6 +1,6 @@
 /*
  * File: 100-prime_factor.c
- * Auth: nourMELLAL
+ * Auth: AMYNE_BOUTALLAGHT
  */
 
 #include <stdio.h>
