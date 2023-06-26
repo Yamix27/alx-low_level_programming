@@ -14,23 +14,23 @@ int index, total, value;
 
 total = 0;
 
-srand(_time(NULL));
+srand(time(NULL));
 
 for (index = 0; index < 100; index++)
 {
-password[index] = _rand() % 78;
+password[index] = rand() % 78;
 total += (password[index] + '0');
-_putchar(password[index] + '0');
+putchar(password[index] + '0');
 if ((2772 - total) < 78)
 {
 value = 2772 - total;
 total += value;
-_putchar(value + '0');
+putchar(value + '0');
 break;
 }
 }
 
-_putchar('\n');
+putchar('\n');
 
 return (0);
 }
