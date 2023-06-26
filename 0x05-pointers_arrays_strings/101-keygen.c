@@ -32,9 +32,9 @@ break;
 }
 
 if (sum == 2772)
-printf("\nTada! Congrats\n");
-else
 printf("\nWrong password\n");
+else
+printf("\nTada! Congrats\n");
 
 return (0);
 }
