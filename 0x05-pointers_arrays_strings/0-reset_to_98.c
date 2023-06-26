@@ -1,11 +1,14 @@
 #include "main.h"
+
 /**
-*reset_to_98 : This func TAKES a PoinTer To an int as a para
-*Also Updates The Value it points To with The value Of 98.
-@n:A Pointer For An int To Be up To Date.
-*Return: 0.
+* reset_to_98 - up To Date D Value PoinTed  BY n to 98.
+* @n: Pointer to an integer to  up To date.
+*
+* Description: This func Takes A PoInTeR To aN int As a PaRa
+* IT also updates the value it points to with the value 98.
 */
+
 void reset_to_98(int *n)
 {
-*n = 98;
+    *n = 98;
 }
