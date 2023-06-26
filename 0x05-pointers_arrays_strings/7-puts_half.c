@@ -2,7 +2,7 @@
 
 /**
 * puts_half - Outputs The Latter Half Of A Str.
-*FOLLOWED BYANEW LINE 
+* FOLLOWED BYANEW LINE 
 * @str: STR To Be Printed
 */
 void puts_half(char *str)
