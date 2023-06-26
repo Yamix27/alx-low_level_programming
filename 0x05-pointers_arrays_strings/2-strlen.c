@@ -4,7 +4,7 @@
 * _strlen - Returns the length of a string.
 * @s: Pointer to the string.
 *
-* Return: The length of the string, which is the number of characters in the string
+* Return: The length the string, which is the number characters in the string
 * excluding the null terminator ('\0').
 */
 
