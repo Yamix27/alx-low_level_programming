@@ -31,10 +31,5 @@ break;
 }
 }
 
-if (sum == 2772)
-printf("\nWrong password\n");
-else
-printf("\nTada! Congrats\n");
-
 return (0);
 }
