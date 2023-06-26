@@ -5,7 +5,7 @@
 * @s: Pointer to the string.
 *
 * Return: The length of the string, which is the number of characters in the string
-*         excluding the null terminator ('\0').
+* excluding the null terminator ('\0').
 */
 
 int _strlen(char *s)
