@@ -29,5 +29,5 @@ for (m = (len + 1) / 2; str[m] != '\0'; m++)
 _putchar(str[m]);
 }
 }
-_putchar('\n')
+_putchar('\n');
 }
