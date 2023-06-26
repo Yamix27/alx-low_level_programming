@@ -14,7 +14,7 @@ int index, total, value;
 
 total = 0;
 
-_srand(_time(NULL));
+srand(_time(NULL));
 
 for (index = 0; index < 100; index++)
 {
