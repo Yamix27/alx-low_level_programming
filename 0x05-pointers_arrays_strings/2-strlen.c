@@ -4,7 +4,8 @@
 * _strlen - The function returns the length of a string
 * @s: The string to be evaluated.
 *
-* It Returns: The string's length.
+* description: The length of the string, which is the number of characters in the string
+*         excluding the null terminator ('\0').
 */
 int _strlen(char *s)
 {
