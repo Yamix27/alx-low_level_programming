@@ -5,7 +5,7 @@
 * print_array - Prints a specified n of elements from an int arr.
 * FOLLOWED BYA NEW LINE
 * @a: Prints array
-* @n: Prints number 
+* @n: Prints number
 */
 void print_array(int *a, int n)
 {
