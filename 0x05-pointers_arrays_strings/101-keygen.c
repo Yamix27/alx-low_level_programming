@@ -8,28 +8,40 @@
 *
 * Return: Always 0 (Success)
 */
+
 int main(void)
 {
-int pass[100];
-int i, sum, n;
-
-sum = 0;
-
 srand(time(NULL));
 
-for (i = 0; i < 100; i++)
+int length = rand() % 11 + 10;
+char password[length + 1];
+int i;
+
+for (i = 0; i < length; i++)
 {
-pass[i] = rand() % 78;
-sum += pass[i];
-putchar(pass[i] + '0');
-if ((2772 - sum) < 78)
+int type = rand() % 3;
+int offset;
+
+if (type == 0)
 {
-n = 2772 - sum;
-sum += n;
-putchar(n + '0');
-break;
+offset = rand() % 26;
+password[i] = 'a' + offset;
+}
+else if (type == 1)
+{
+offset = rand() % 26;
+password[i] = 'A' + offset;
+}
+else
+{
+offset = rand() % 10;
+password[i] = '0' + offset;
 }
 }
+
+password[i] = '\0';
+
+printf("%s\n", password);
 
 return (0);
 }
