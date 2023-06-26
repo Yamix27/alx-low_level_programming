@@ -20,14 +20,14 @@ srand(time(NULL));
 
 for (index = 0; index < 100; index++)
 {
-password[index] = rand() % 78;
-total += (password[index] + '0');
-putchar(password[index] + '0');
+password[index] = rand() % 78 + '0';
+total += password[index];
+putchar(password[index]);
 if ((2772 - total) < 78)
 {
 value = 2772 - total;
 total += value;
-putchar(value + '0');
+putchar(value);
 break;
 }
 }
