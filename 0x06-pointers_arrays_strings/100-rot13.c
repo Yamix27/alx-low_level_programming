@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* rot13 - using ROT13 cipher a String is encoded 
+* rot13 - using ROT13 cipher a String is encoded
 * @s: encoded String
 *
 * Return: Result encoded string
