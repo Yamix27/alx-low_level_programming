@@ -1,16 +1,10 @@
 #include "main.h"
 
 /**
-HEAD
-* rev_string - reverse array
-* @n: integer params
-* Return: 0
-*/
  * rev_string - reverse array
  * @n: integer params
  * Return: 0
  */
-9b1f4a7667c4de15c8231869069592c28565792a
 
 void rev_string(char *n)
 {
@@ -33,22 +27,13 @@ void rev_string(char *n)
 }
 
 /**
-HEAD
-* infinite_add - add 2 numbers together
-* @n1: text representation of 1st number to add
-* @n2: text representation of 2nd number to add
-* @r: pointer to buffer
-* @size_r: buffer size
-* Return: pointer to calling function
-*/
  * infinite_add - add 2 numbers together
  * @n1: text representation of 1st number to add
  * @n2: text representation of 2nd number to add
  * @r: pointer to buffer
  * @size_r: buffer size
  * Return: pointer to calling function
-*/
-9b1f4a7667c4de15c8231869069592c28565792a
+ */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
