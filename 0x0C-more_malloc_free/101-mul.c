@@ -1,85 +1,108 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * is_valid_number - Checks if the given string represents a valid number.
- * @str: The string to check.
+ * is_digit - checks if a string contains a non-digit char
+ * @s: string to be evaluated
  *
- * Return: 1 if the string is a valid number, 0 otherwise.
+ * Return: 0 if a non-digit is found, 1 otherwise
  */
-int is_valid_number(const char *str)
+int is_digit(const char *s)
 {
-    if (*str == '\0')
-        return 0;
-
-    while (*str)
-    {
-        if (*str < '0' || *str > '9')
-            return 0;
-        str++;
-    }
-
-    return 1;
+	while (*s)
+	{
+		if (*s < '0' || *s > '9')
+			return 0;
+		s++;
+	}
+	return (1);
 }
 
 /**
- * multiply_numbers - Multiplies two positive numbers.
- * @num1: The first number.
- * @num2: The second number.
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
  *
- * Return: The result of the multiplication.
+ * Return: the length of the string
  */
-unsigned long long multiply_numbers(const char *num1, const char *num2)
+int _strlen(const char *s)
 {
-    unsigned long long result = 0;
+	int len = 0;
 
-    while (*num1)
-    {
-        unsigned long long digit1 = *num1 - '0';
-        unsigned long long temp = 0;
-        const char *ptr = num2;
-
-        while (*ptr)
-        {
-            unsigned long long digit2 = *ptr - '0';
-            temp = (temp * 10) + (digit1 * digit2);
-            ptr++;
-        }
-
-        result = (result * 10) + temp;
-        num1++;
-    }
-
-    return result;
+	while (*s)
+	{
+		len++;
+		s++;
+	}
+	return (len);
 }
 
 /**
- * main - Entry point of the program.
- * @argc: The argument count.
- * @argv: The argument vector.
+ * errors - handles errors for main
+ */
+void errors(void)
+{
+	printf("Error\n");
+	exit(98);
+}
+
+/**
+ * main - multiplies two positive numbers
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: 0 on success, 98 on error.
+ * Return: always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-    if (argc != 3)
-    {
-        printf("Error\n");
-        return (98);
-    }
+	char *s1, *s2;
+	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
 
-    if (!is_valid_number(argv[1]) || !is_valid_number(argv[2]))
-    {
-        printf("Error\n");
-        return (98);
-    }
+	if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
+		errors();
 
-    unsigned long long num1 = strtoull(argv[1], NULL, 10);
-    unsigned long long num2 = strtoull(argv[2], NULL, 10);
-    unsigned long long result = multiply_numbers(argv[1], argv[2]);
+	s1 = argv[1];
+	s2 = argv[2];
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+	len = len1 + len2 + 1;
 
-    printf("%llu\n", result);
+	result = malloc(sizeof(int) * len);
+	if (!result)
+		return (1);
 
-    return (0);
+	for (i = 0; i <= len1 + len2; i++)
+		result[i] = 0;
+
+	for (len1 = len1 - 1; len1 >= 0; len1--)
+	{
+		digit1 = s1[len1] - '0';
+		carry = 0;
+		for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
+		{
+			digit2 = s2[len2] - '0';
+			carry += result[len1 + len2 + 1] + (digit1 * digit2);
+			result[len1 + len2 + 1] = carry % 10;
+			carry /= 10;
+		}
+		if (carry > 0)
+			result[len1 + len2 + 1] += carry;
+	}
+
+	for (i = 0; i < len - 1; i++)
+	{
+		if (result[i])
+			a = 1;
+		if (a)
+			_putchar(result[i] + '0');
+	}
+
+	if (!a)
+		_putchar('0');
+
+	_putchar('\n');
+	free(result);
+	return (0);
 }
+
 
