@@ -7,7 +7,7 @@
  *    * @b: second value to compare
  *     *
  *      * Return: The smaller of the two values, or a if equal
- *       */
+*/
 size_t minimum_value(size_t a, size_t b)
 {
 	if (b < a)
@@ -17,14 +17,14 @@ size_t minimum_value(size_t a, size_t b)
 
 
 /**
- *  * jump_search - searches for a value in a sorted array of integers using the
+ *  * jump_search - searches for a value in a sorted array of int using the
  *   * Jump search algorithm
  *    * @array: pointer to the first element of the array to search in
  *     * @size: number of elements in array
  *      * @value: value to search for
  *       *
  *        * Return: first index where value is located, or -1 on failure
- *         */
+*/
 int jump_search(int *array, size_t size, int value)
 {
 	size_t l, r, jump;
