@@ -6,12 +6,12 @@
  *    * @list: A pointer to the  head of the linked list to search.
  *     * @value: The value to search for.
  *      *
- *       * Return: If the value is not present or the head of the list is NULL, NULL.
- *        *         Otherwise, a pointer to the first node where the value is located.
+ *       * Return: If the value is not prsnt or  head of  lst is NULL, NULL.
+ *        *         Otherwise, a pnt  the first node where value is located.
  *         *
- *          * Description: Prints a value every time it is compared in the list.
- *           *              Uses the square root of the list size as the jump step.
- *            */
+ *          * Description: Prints a value every time it is compared  the list.
+ *           *              Uses the square root  the list size  the jump step.
+*/
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
 	skiplist_t *node, *jump;
