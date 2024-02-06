@@ -8,7 +8,7 @@
  *      * @value: The value to look for.
  *       *
  *        * Return: The first index of the value in the array, otherwise -1.
- *         */
+*/
 int interpolation_search(int *array, size_t size, int value)
 {
 	size_t low = 0, high = size - 1, pos = 0;

@@ -11,8 +11,8 @@
  *         * Return: If the value is not present or the array is NULL, -1.
  *          *         Otherwise, the index where the value is located.
  *           *
- *            * Description: Prints the [sub]array being searched after each change.
- *             */
+ *            * Description: Print sub aray being searched after each change.
+*/
 int _binary_search(int *array, size_t left, size_t right, int value)
 {
 	size_t i;
@@ -49,8 +49,8 @@ int _binary_search(int *array, size_t left, size_t right, int value)
  *        * Return: If the value is not present or the array is NULL, -1.
  *         *         Otherwise, the index where the value is located.
  *          *
- *           * Description: Prints a value every time it is compared in the array.
- *            */
+ *           * Description: Print a value every time is compared in the array.
+*/
 int exponential_search(int *array, size_t size, int value)
 {
 	size_t i = 0, right;
