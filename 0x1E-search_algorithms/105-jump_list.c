@@ -8,7 +8,7 @@
  *     * @index: desired index
  *      *
  *       * Return: node with desired index, or last node in the list
- *        */
+*/
 listint_t *move_forward(listint_t *list, size_t index)
 {
 	while (list->next != NULL && list->index < index)
@@ -17,14 +17,14 @@ listint_t *move_forward(listint_t *list, size_t index)
 }
 
 /**
- *  * jump_list - searches for a value in a sorted list of integers using the Jump
+ *  * jump_list - searches a value in a sorted list of integers using the Jump
  *   * search algorithm
  *    * @list: pointer to the head of the list to search in
  *     * @size: number of nodes in list
  *      * @value: value to search for
  *       *
- *        * Return: pointer to the first node where value is located, or NULL on failure
- *         */
+ *        * Return: point the first node where value located, NULL on failure
+*/
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	size_t jump;
