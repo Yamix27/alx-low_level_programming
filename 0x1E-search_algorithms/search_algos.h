@@ -9,7 +9,7 @@
  *     * @next: Pointer to the next node.
  *      *
  *       * Description: Singly linked list node structure.
- *        */
+*/
 
 typedef struct listint_s
 {
@@ -28,8 +28,8 @@ typedef struct listint_s
  *     * @next: Pointer to the next node.
  *      * @express: Pointer to the next node in the express lane.
  *       *
- *        * Description: Singly linked list node structure with an express lane.
- *         */
+ *        * Description: Singly linked list node structure with  express lane.
+*/
 typedef struct skiplist_s
 {
 	/* Integer stored at the node. */
